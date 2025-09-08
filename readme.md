@@ -7,5 +7,15 @@ conceitos abordados:
 - Armazenamento e gerenciamento de estado manual
 - Funções limpas
 - Organização de código
+- 
+---
+## 👀 Demonstração
+<img width="1912" height="892" alt="image" src="https://github.com/user-attachments/assets/f27b976d-38f0-4200-94ec-40ebc013ad93" />
 
+---
+
+## [Jogue aqui](https://catarinaguima.github.io/Dio-js-yugioh-assets/)
+
+
+---
 "It's time to duel!" - Yugi Muto
