@@ -1,3 +1,16 @@
+body {
+ cursor: url('../assets/cursor/cursor.cur'), default;
+}
+
+button, 
+a,
+img:hover,
+button:hover,
+a:hover {
+ cursor: url('../assets/cursor/yamiyugicursorGLOW.png'), pointer;
+}
+
+
 .bg-video {
     position: absolute;
     z-index: -2;
@@ -117,7 +130,7 @@
 }
 
 .card-box {
-    height: 9rem;
+    height: 4rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -128,7 +141,6 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -142,6 +154,7 @@
     transform: scale(1.05);
     border-radius: 8px;
 }
+
 
 .card {
     height: 8rem;
