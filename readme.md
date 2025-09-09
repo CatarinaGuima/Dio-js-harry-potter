@@ -1,4 +1,4 @@
-# 🧙‍♂️✨ Guia Mágico para Cortar Cartas de Harry Potter Homebrew
+# 🧙‍♂️✨ Guia Mágico Harry Potter | Jo-ken-po Edition
 
 <div align="center">
 <img src="https://img.shields.io/badge/Hogwarts-Magic%20School-red?style=for-the-badge&logo=book&logoColor=white" />
