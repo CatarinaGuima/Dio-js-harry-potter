@@ -30,7 +30,7 @@ Este projeto foi desenvolvido para demonstrar conceitos fundamentais de **lógic
 
 ## 👀 Demonstração  
 
-<img width="1912" height="892" alt="Demonstração do jogo Yu-Gi-Oh Jo-Ken-Po" src="https://github.com/user-attachments/assets/f27b976d-38f0-4200-94ec-40ebc013ad93" />
+<img width="1916" height="897" alt="image" src="https://github.com/user-attachments/assets/352cf221-afa6-49a9-8c7c-af1b8135d91c" />
 
 ---
 
