@@ -11,8 +11,10 @@
 ---
 ## 📜 Prefácio do Livro de Feitiços
 Atenção, alunos de Hogwarts! Este grimório contém instruções mágicas para preparar suas cartas **homebrew** do mundo bruxo.  
-**Regra nº 1:** se divertir – afinal, até o Professor Dumbledore aprecia uma boa partida de Quadribol!
-Uma recriação temática do clássico jogo **Pedra-Papel-Tesoura**, ambientada no universo de **Harry Potter**.  
+**Regra nº 1:** Se divertir – afinal, até o Professor Dumbledore aprecia uma boa partida de Quadribol!
+<br>
+**Regra nº 2:** Uma recriação temática do clássico jogo **Pedra-Papel-Tesoura**, ambientada no universo de **Harry Potter**.  
+<br>
 Este projeto foi desenvolvido para demonstrar conceitos fundamentais de **lógica de programação** aplicados a jogos de forma **criativa e divertida**.  
 
 ---
