@@ -47,5 +47,5 @@ Este projeto foi desenvolvido para demonstrar conceitos fundamentais de **lógic
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000)
 
 - **HTML5** → Estrutura do jogo  
-- **CSS3** → Estilização e tema Yu-Gi-Oh  
+- **CSS3** → Estilização e tema Harry Potter
 - **JavaScript** → Lógica e interatividade
