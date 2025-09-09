@@ -36,7 +36,7 @@ Este projeto foi desenvolvido para demonstrar conceitos fundamentais de **lógic
 
 ## 🎮 Jogue agora  
 
-👉 [**Clique aqui para jogar**](https://catarinaguima.github.io/Dio-js-yugioh-assets/)  
+👉 [**Clique aqui para jogar**](https://catarinaguima.github.io/Dio-js-harry-potter/)
 
 ---
 
