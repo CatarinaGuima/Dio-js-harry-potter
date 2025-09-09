@@ -1,28 +1,47 @@
+/* ===========================
+   🎇 Harry Potter Theme CSS 🎇
+=========================== */
+
+/* Fonte temática (Lumos ou Harry P) */
+@import url('https://fonts.cdnfonts.com/css/harry-potter'); 
+
 body {
- cursor: url('../assets/cursor/cursor.cur'), default;
+    cursor: url('../assets/cursor/cursor.png'), default;
+    overflow: hidden;
+    font-family: 'Harry Potter', serif;
+    background-color: #000; /* fallback se vídeo não carregar */
+    color: #f8e3a1; /* cor amarelada pergaminho */
 }
 
+/* Cursor especial em botões e links */
 button, 
 a,
 img:hover,
 button:hover,
 a:hover {
- cursor: url('../assets/cursor/yamiyugicursorGLOW.png'), pointer;
+    cursor: url('../assets/cursor/cursor.png'), pointer;
 }
 
-
+/* 🎥 Fundo com vídeo */
 .bg-video {
-    position: absolute;
+    position: fixed;
     z-index: -2;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .bg-video video {
+    width: 100vw;
     height: 100vh;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .bg-video::after {
@@ -32,14 +51,21 @@ a:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(circle at center, rgba(0,0,0,0.3) 10%, rgba(0,0,0,0.7) 90%);
 }
+
+/* ===========================
+   Estrutura principal
+=========================== */
 
 .container {
     position: relative;
     z-index: 3;
     display: flex;
     height: 100vh;
+    width: 100vw;
+    background: url('../assets/bg/parchment_texture.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .container_left {
@@ -49,53 +75,74 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    border-right: 3px solid #7f0909; /* vermelho Hogwarts */
+    box-shadow: inset -5px 0 15px rgba(0,0,0,0.7);
 }
 
 .container_right {
     width: 65%;
 }
 
+/* ===========================
+   Placar
+=========================== */
+
 .score_box {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 30px;
-    font-size: 1.2em;
-    color: #fff;
+    background-color: rgba(127, 9, 9, 0.85); /* Gryffindor red */
+    border: 2px solid #FFD700; /* dourado */
+    border-radius: 12px;
+    padding: 25px;
+    font-size: 1.4em;
+    color: #f8e3a1;
+    text-shadow: 1px 1px 5px #000;
     margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-family: 'Harry Potter', serif;
 }
+
+/* ===========================
+   Moldura dos detalhes
+=========================== */
 
 .frame {
-    padding: 10px;
-    border: 5px solid #FFD700;
-    /* Golden color */
+    padding: 12px;
+    border: 4px double #FFD700;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-    /* Golden glow */
+    background: rgba(40, 20, 0, 0.6);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7), inset 0 0 10px rgba(0,0,0,0.8);
 }
 
+/* ===========================
+   Card info
+=========================== */
+
 .card_details {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(15, 15, 15, 0.7);
+    border: 2px solid #FFD700;
     border-radius: 10px;
     padding: 1rem;
-    color: #fff;
+    color: #f8e3a1;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 6rem;
-    width: 100%;
+    font-family: 'Harry Potter', serif;
+    text-shadow: 0 0 5px #000;
 }
 
 #card-name {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: #FFD700;
+    text-shadow: 0 0 10px #ffdf6c;
 }
 
 #card-type {
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    color: #9f9f9f;
 }
+
+/* ===========================
+   Área de cartas
+=========================== */
 
 .card-box_container {
     height: 100vh;
@@ -114,58 +161,84 @@ a:hover {
     padding-top: 0.2rem;
     height: 300px;
     font-size: 2rem;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    color: #FFD700;
+    text-shadow: 0 0 10px #000, 0 0 20px #FFD700;
 }
 
+/* VS escrito mágico */
 .versus-top, .versus-bottom {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
+    font-family: 'Harry Potter', serif;
+    letter-spacing: 3px;
 }
 
 #next-duel {
     display: none;
+    background: linear-gradient(45deg, #7f0909, #ffd700);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Harry Potter', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
 }
 
+#next-duel:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #FFD700;
+}
+
+/* ===========================
+   Cartas
+=========================== */
+
 .card-box {
-    height: 4rem;
+    height: 2rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex: 1;
     margin: 0.3rem 0;
-    border: 2px solid #fff;
+    border: 2px dashed #FFD700;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    background: rgba(15,15,15,0.6);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card-infield {
-    height: 11.2rem;
+    height: 12rem;
     width: 8rem;
-    border: 2px solid #00FF00;
-    /* Green border for in-field cards */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
-    /* Green glow */
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
     transform: scale(1.05);
-    border-radius: 8px;
+    border-radius: 10px;
+    margin: 0 1rem;
 }
-
 
 .card {
     height: 8rem;
     width: 6rem;
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.3s;
+    border: 1px solid #fff;
 }
 
 .card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    transform: scale(1.15);
+    box-shadow: 0 0 20px #FFD700, 0 0 25px #ffdf6c;
     z-index: 2;
 }
 
+#card-image {
+    border-radius: 5px;
+    border: 2px solid #FFD700;
+}

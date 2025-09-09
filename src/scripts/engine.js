@@ -1,3 +1,4 @@
+
 const state = {
   score: {
     playerScore: 0,
@@ -24,34 +25,182 @@ const state = {
   },
 };
 
+
 const pathImages = "./src/assets/icons/";
 
+//cartas disponiveis
 const cardData = [
   {
     id: 0,
-    name: "Blue-Eyes White Dragon",
+    name: "Episkey",
     type: "Paper",
-    img: `${pathImages}dragon.png`,
+    img: `${pathImages}episkey.jpg`,
     WinOf: [1],
     LoseOf: [2],
   },
   {
     id: 1,
-    name: "Dark Magician",
+    name: "Geminio",
     type: "Rock",
-    img: `${pathImages}magician.png`,
+    img: `${pathImages}geminio.jpg`,
     WinOf: [2],
     LoseOf: [0],
   },
   {
     id: 2,
-    name: "Exodia",
+    name: "Evanesco",
     type: "Scissors",
-    img: `${pathImages}exodia.png`,
+    img: `${pathImages}evanesco.jpg`,
     WinOf: [0],
     LoseOf: [1],
   },
+  {
+    id: 3,
+    name: "Locomotor",
+    type: "Paper",
+    img: `${pathImages}locomotor.jpg`,
+    WinOf: [1],
+    LoseOf: [2],
+  },
+  {
+    id: 4,
+    name: "Aguamenti",
+    type: "Rock",
+    img: `${pathImages}aguamenti.jpg`,
+    WinOf: [2],
+    LoseOf: [0],
+  },
+  {
+    id: 5,
+    name: "Appare-Vestigium",
+    type: "Scissors",
+    img: `${pathImages}appare-vestigium.jpg`,
+    WinOf: [0],
+    LoseOf: [1],
+  },
+  {
+    id: 6,
+    name: "Avenseguim",
+    type: "Paper",
+    img: `${pathImages}avenseguim.jpg`,
+    WinOf: [1],
+    LoseOf: [2],
+  },
+  {
+    id: 7,
+    name: "Levicourpis",
+    type: "Rock",
+    img: `${pathImages}levicourpis.jpg`,
+    WinOf: [2],
+    LoseOf: [0],
+  },
+  {
+    id: 8,
+    name: "Aberto",
+    type: "Scissors",
+    img: `${pathImages}aberto.jpg`,
+    WinOf: [0],
+    LoseOf: [1],
+  },
+  {
+    id: 9,
+    name: "Impervious",
+    type: "Paper",
+    img: `${pathImages}impervious.jpg`,
+    WinOf: [1],
+    LoseOf: [2],
+  },
+  {
+    id: 10,
+    name: "Legilimency",
+    type: "Rock",
+    img: `${pathImages}legilimency.jpg`,
+    WinOf: [2],
+    LoseOf: [0],
+  },
+  {
+    id: 11,
+    name: "Sonorus",
+    type: "Scissors",
+    img: `${pathImages}sonorus.jpg`,
+    WinOf: [0],
+    LoseOf: [1],
+  },
+  {
+    id: 12,
+    name: "Salvio-hexia",
+    type: "Scissors",
+    img: `${pathImages}salvio-hexia.jpg`,
+    WinOf: [0],
+    LoseOf: [1],
+  },
+  {
+    id: 13,
+    name: "Confringo",
+    type: "Paper",
+    img: `${pathImages}confringo.jpg`,
+    WinOf: [1],
+    LoseOf: [2],
+  },
+  {
+    id: 14,
+    name: "Finestra",
+    type: "Rock",
+    img: `${pathImages}finestra.jpg`,
+    WinOf: [2],
+    LoseOf: [0],
+  },
+  {
+    id: 15,
+    name: "Rictusempra",
+    type: "Scissors",
+    img: `${pathImages}rictusempra.jpg`,
+    WinOf: [0],
+    LoseOf: [1],
+  },
+  {
+    id: 16,
+    name: "Riddikulus",
+    type: "Paper",
+    img: `${pathImages}riddikulus.jpg`,
+    WinOf: [1],
+    LoseOf: [2],
+  },
+  {
+    id: 17,
+    name: "Enervate",
+    type: "Rock",
+    img: `${pathImages}enervate.jpg`,
+    WinOf: [2],
+    LoseOf: [0],
+  },
+  {
+    id: 18,
+    name: "Impedimenta",
+    type: "Scissors",
+    img: `${pathImages}impedimenta.jpg`,
+    WinOf: [0],
+    LoseOf: [1],
+  },
+  {
+    id: 19,
+    name: "Nebulus",
+    type: "Paper",
+    img: `${pathImages}nebulus.jpg`,
+    WinOf: [1],
+    LoseOf: [2],
+  },
+  {
+    id: 20,
+    name: "Colloportus",
+    type: "Rock",
+    img: `${pathImages}colloportus.jpg`,
+    WinOf: [2],
+    LoseOf: [0],
+  },
 ];
+
+
 
 async function getRandomCardId() {
   const randomIndex = Math.floor(Math.random() * cardData.length);
@@ -168,8 +317,8 @@ function init() {
   drawCards(5, state.playerSides.computer);
 
   const bgm = document.getElementById("bgm");
-  bgm.volume = 0.03;
-  bgm.play();
+  // bgm.volume = 0.03;
+  // bgm.play();
 }
 
 init();
