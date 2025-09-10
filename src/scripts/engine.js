@@ -201,7 +201,6 @@ const cardData = [
 ];
 
 
-
 async function getRandomCardId() {
   const randomIndex = Math.floor(Math.random() * cardData.length);
   return cardData[randomIndex].id;
@@ -312,11 +311,49 @@ async function playAudio(status) {
     audio.volume = 0.05;
 }
 
+// Efeitos de partículas mágicas
+        function createMagicSpark(x, y) {
+            const spark = document.createElement('div');
+            spark.className = 'magic-sparks';
+            spark.style.left = x + 'px';
+            spark.style.top = y + 'px';
+            spark.style.width = Math.random() * 20 + 10 + 'px';
+            spark.style.height = spark.style.width;
+            spark.style.background = `radial-gradient(circle, 
+                ${Math.random() > 0.5 ? '#d4af37' : '#00ff8c'}, 
+                transparent)`;
+            spark.style.borderRadius = '50%';
+            document.body.appendChild(spark);
+
+            setTimeout(() => {
+                spark.remove();
+            }, 1000);
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.95) {
+                createMagicSpark(e.clientX, e.clientY);
+            }
+        });
+
+        // Efeito de hover nas cartas
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                createMagicSpark(
+                    card.offsetLeft + card.offsetWidth / 2,
+                    card.offsetTop + card.offsetHeight / 2
+                );
+            });
+        });
+
+
+
 function init() {
   drawCards(5, state.playerSides.player1);
   drawCards(5, state.playerSides.computer);
 
-  const bgm = document.getElementById("bgm");
+  // const bgm = document.getElementById("bgm");
   // bgm.volume = 0.03;
   // bgm.play();
 }

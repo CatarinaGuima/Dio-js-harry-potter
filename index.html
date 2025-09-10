@@ -13,29 +13,25 @@
       rel="stylesheet"
     />
     <!-- favvicon -->
-     <link rel="shortcut icon" href="./src/assets/favicon/Favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon/Favicon.png"
+      type="image/x-icon"
+    />
     <!-- main style -->
     <link rel="stylesheet" href="./src/styles/main.css" />
 
-    <!-- framework -->
-    <!-- <link rel="stylesheet" href="./src/styles/buttons.css" />
-    <link rel="stylesheet" href="./src/styles/containers_and_frames.css" /> -->
     <title>Harry Potter | Jo-ken-po Edition</title>
   </head>
   <body>
     <audio id="bgm" loop>
       <source src="./src/assets/audios/bgm.mp3" type="audio/mp3" />
-        </audio>
     </audio>
-    <div class="bg-video">
-      <video class="video" autoplay loop muted>
-        <source src="./src/assets/video/hp.mp4" type="video/mp4" />
-      </video>
-    </div>
+
     <div class="container">
-      <div class="container_left framed-golden-2">
+      <div class="container_left">
         <div class="score_box frame">
-          <span id="score_points">Win: 0 | lose: 0</span>
+          <span id="score_points">Win: 0 | Lose: 0</span>
         </div>
         <div class="menu_avatar">
           <img id="card-image" width="300px" />
@@ -45,25 +41,41 @@
           <p id="card-type">uma carta</p>
         </div>
       </div>
+
       <div class="container_right">
+        <div class="bg-video">
+          <video class="video" autoplay loop muted>
+            <source src="./src/assets/video/hp.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="card-box_container">
-          <div class="card-box framed" id="computer-cards"></div>
-          <div class=".card-versus_container">
+          <div class="card-box" id="computer-cards"></div>
+
+          <div class="card-versus_container">
             <div class="versus-top">
               <div class="card-infield">
-                <img id="player-field-card" height="100%" width="125px"/>
+                <img id="player-field-card" height="100%" width="125px" />
               </div>
-              <img src="./src/assets/icons/brasao.png" height="125px" />
+
+              <img
+                src="./src/assets/icons/brasao.png"
+                height="125px"
+                alt="Brasão de Hogwarts"
+              />
 
               <div class="card-infield">
-                <img id="computer-field-card" height="100%" width="125px"/>
+                <img id="computer-field-card" height="100%" width="125px" />
               </div>
             </div>
+
             <div class="versus-bottom">
-              <button class="rpgui-button" id="next-duel" onclick="resetDuel()">GANHOU</button>
+              <button id="next-duel" onclick="resetDuel()">
+                GANHOU
+              </button>
             </div>
           </div>
-          <div class="card-box framed" id="player-cards"></div>
+
+          <div class="card-box" id="player-cards"></div>
         </div>
       </div>
     </div>
