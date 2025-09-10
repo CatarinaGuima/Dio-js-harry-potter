@@ -30,7 +30,7 @@ Este projeto foi desenvolvido para demonstrar conceitos fundamentais de **lógic
 
 ## 👀 Demonstração  
 
-<img width="1916" height="897" alt="image" src="https://github.com/user-attachments/assets/352cf221-afa6-49a9-8c7c-af1b8135d91c" />
+<img width="1913" height="888" alt="image" src="https://github.com/user-attachments/assets/06ebd875-17d8-433b-9e71-e7a5b541d897" />
 
 ---
 
