@@ -232,6 +232,7 @@ a:hover {
     transform: translateY(-5px) scale(1.05);
     filter: drop-shadow(0 0 15px var(--gryffindor-gold));
     text-shadow: 0 0 15px var(--gryffindor-gold);
+    cursor: url("https://cur.cursors-4u.net/user/use-1/use160.cur") 4 0, default;
 }
 
 #next-duel:active {
